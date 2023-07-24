@@ -1,0 +1,129 @@
+@import 'var.scss';
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    &,
+    &::before,
+    &::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;        
+    }
+}
+body {
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+//========================================================================================================================================================
+.app {
+    padding: 35px 0;
+    /* .app__container */
+    &__container {
+        max-width: 1360px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    /* .app__title */
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 120%;
+
+    }
+    /* .app__form */
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    /* .app__box */
+    &__box {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    /* .app__control */
+    &__control {
+        width: 100%;
+        padding: 12px 18px;
+        border: 1px solid $grey6;
+        font-size: 18px;
+        line-height: 130%;
+        color: $mainColor;
+        border-radius: 6px;
+        transition: all 0.5s ease 0s;
+        outline: none;
+        &:focus{
+            outline: 1px solid $grey9;
+            outline-offset: 2px;
+        }
+    }
+    /* .app__btn */
+    &__btn {
+        align-self: flex-start;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+    }
+    /* .app__table */
+    &__table {
+        width: 100%;
+        th, td {
+            border: 1px solid $mainColor;
+            padding: 8px;
+            font-size: 18px;
+            color: $mainColor;
+        }
+        th {
+            font-weight: 500;
+            text-align: start;
+        }
+        td {
+            font-weight: 400;
+        }
+    }
+    /* .app__table-striped */
+    &__table-striped {
+    }
+}
+.btn {
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: all 0.5s ease 0s;
+    &-primary {
+        color: $whiteColor;
+        background-color: $primaryColor;
+        transition: all 0.5s ease 0s;
+        &:hover{
+            box-shadow: 0 5px 24px $primaryColor;
+        }
+    }
+}
+.userTable {
+}
+.user-btn__delete {
+    color: red;
+    transition: all 0.5s ease 0s;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.error .input-field {
+    border-color: red;
+}
+
+.error-label {
+    display: block;
+    color: red;
+    margin-bottom: 10px;
+    padding: 6px 0 0 18px;
+}
